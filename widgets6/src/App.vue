@@ -1,8 +1,10 @@
 <script>
-import Accordion from "./components/Accordion.vue";
+//import Accordion from "./components/Accordion.vue";
+//<Accordion :items="items" />
+import Search from "./components/Search.vue";
 
 export default {
-  components: { Accordion },
+  components: { Search },
   data() {
     return {
       items: [
@@ -26,6 +28,6 @@ export default {
 
 <template>
   <div>
-    <Accordion :items="items" />
+    <Search />
   </div>
 </template>
