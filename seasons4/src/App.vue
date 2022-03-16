@@ -27,9 +27,11 @@ export default {
 </script>
 
 <template>
-  <div v-if="lat && !errorMessage">
-    <SeasonDisplay :lat="lat" />
+  <div>
+    <div v-if="lat && !errorMessage">
+      <SeasonDisplay :lat="lat" />
+    </div>
+    <div v-if="!lat && errorMessage">Error: {{ errorMessage }}</div>
+    <div v-if="!lat && !errorMessage">Loading...</div>
   </div>
-  <div v-if="!lat && errorMessage">Error: {{ errorMessage }}</div>
-  <div v-if="!lat && !errorMessage">Loading...</div>
 </template>
