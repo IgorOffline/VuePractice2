@@ -1,33 +1,12 @@
-<script>
-//import Accordion from "./components/Accordion.vue";
-//<Accordion :items="items" />
-import Search from "./components/Search.vue";
-
-export default {
-  components: { Search },
-  data() {
-    return {
-      items: [
-        {
-          title: "Title1",
-          content: "Content1",
-        },
-        {
-          title: "Title2",
-          content: "Content2",
-        },
-        {
-          title: "Title3",
-          content: "Content3",
-        },
-      ],
-    };
-  },
-};
-</script>
-
 <template>
-  <div>
-    <Search />
+  <div style="padding: 10px">
+    <nav style="margin: 10px">
+      <RouterLink to="/">Accordion</RouterLink>
+      <br />
+      <RouterLink to="/search">Search</RouterLink>
+      <br />
+      <RouterLink to="/dropdown">Dropdown</RouterLink>
+    </nav>
+    <RouterView />
   </div>
 </template>
